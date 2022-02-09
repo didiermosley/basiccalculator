@@ -143,7 +143,7 @@ span{
     background:#151616;
 }
 
-@media only screen and (max-width:390px) {
+@media only screen and (max-width:450px) {
 
     .calculator{
         height:50vh;
