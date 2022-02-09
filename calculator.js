@@ -71,9 +71,7 @@ const write = (n)=>{
     }
     console.log('test');
     
-    if(sqrT==false){
-        resolve();
-    }
+    resolve();
 }
 
 one.addEventListener("click", ()=>{
@@ -145,19 +143,22 @@ square.addEventListener("click",()=>{
 root.addEventListener("click",()=>{
     sqrT=true;
     result.textContent = Math.sqrt(input.textContent);
+    console.log('sqrt es true');
 })
 
 const resolve = ()=>{
-    setInterval(()=>{
-        try{
-            result.textContent = eval(input.textContent);
-            result.style.fontSize=`2.5rem`;
-        }catch{
-            result.textContent = `Put another number`;
-            result.style.fontSize=`1.5rem`;
-            // console.log('Error');
-        }
-    },100);
+    if(sqrT==false){
+        setInterval(()=>{
+            try{
+                result.textContent = eval(input.textContent);
+                result.style.fontSize=`2.5rem`;
+            }catch{
+                result.textContent = `Put another number`;
+                result.style.fontSize=`1.5rem`;
+                // console.log('Error');
+            }
+        },100);
+    }
 }
 
 // Dark Mode
@@ -191,4 +192,5 @@ const changeColor = color=>{
     })
     document.querySelector('.credits').style.color= color;
     input.style.color=color;
+    result.style.color=color;
 }
