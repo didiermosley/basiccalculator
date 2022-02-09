@@ -37,28 +37,27 @@ const equal = document.getElementById("equal");
 
 // Result
 const result = document.querySelector('.result');
-let sqrT=false;
 
 equal.addEventListener("click", ()=>{
     input.style.color = `gray`;
     result.style.color = `#52BF90`;
     result.textContent = eval(input.textContent);
-    if(sqrT==true) sqrT=false;
     console.log(eval(input.value));
 })
 
 erase.addEventListener("click",()=>{
     input.textContent='';
+    result.textContent=``;
     if(booleanM==true){
         input.style.color=`gray`;
     }else if(booleanS=true){
         input.style.color=`#111`;
     }
-    if(sqrT==true) sqrT=false;
 })
 
 del.addEventListener("click",()=>{
     input.innerText = input.innerText.slice(0,-1);
+    resolve();
 })
 
 // Numbers
@@ -141,23 +140,18 @@ square.addEventListener("click",()=>{
 })
 
 root.addEventListener("click",()=>{
-    sqrT=true;
     result.textContent = Math.sqrt(input.textContent);
     console.log('sqrt es true');
 })
 
 const resolve = ()=>{
-    if(sqrT==false){
-        setInterval(()=>{
-            try{
-                result.textContent = eval(input.textContent);
-                result.style.fontSize=`2.5rem`;
-            }catch{
-                result.textContent = `Put another number`;
-                result.style.fontSize=`1.5rem`;
-                // console.log('Error');
-            }
-        },100);
+    try{
+        result.textContent = eval(input.textContent);
+        result.style.fontSize=`2.5rem`;
+    }catch{
+        result.textContent = `Put another number`;
+        result.style.fontSize=`1.5rem`;
+        // console.log('Error');
     }
 }
 
