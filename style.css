@@ -2,8 +2,143 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
-    background-color:rgb(23, 40, 54);
+    background-color:#e7e7e2;
+    display:grid;
+    place-items: center;
+}
+
+.calculator{
+    height:550px;
+    width:47vw;
+    max-width:470px;
+    background:#ffffff;
+    border-radius:15px;
+    margin-top: 10vh;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.modes{
+    background: #e4e4e4;
+    max-width: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    padding:10px;
+    font-size:1rem;
+    border-radius: 10px;
+}
+
+ion-icon{
+    color:#838383;
+}
+
+.input{
+    width:100%;
+    height:114px;
+    background:transparent;
+    border:none;
+    padding:10px;
+    text-align: right;
+    padding-top:75px;
+    padding-right: 15px;
+    font-size:1.5rem;
+    appearance:none;
+} 
+
+.input:focus{
+    outline:0;
+}
+
+.result{
+    /* height:20px; */
+    font-size:2.5rem;
+    text-align: end;
+    position: relative;
+    padding:15px;
+    font-weight: bold;
+    height: 79px;
+}
+
+.grid-container{
+    height:90%;
+    display:grid;
+    grid-template-columns: repeat(4,minmax(50px,1fr));
+    grid-template-rows: repeat(5,minmax(50px,1fr));
+    grid-gap:15px;
+    background:#f7f7f7;
+    border-radius: 25px 25px 15px 15px;
+    padding:15px;
+}
+
+.grid-item{
+    border:none;
+    border-radius:20px;
+    background:#f3f3f3;
+    transition: all .3s;
+    font-size: 1.2rem;
+}
+
+.grid-item:hover{
+    background:#e4e4e4;
+    /* cursor: pointer; */
+}
+
+.grid-item:first-child{
+    color:#ff0000;
+}
+
+.grid-item:nth-child(19){
+    background:red;
+    color:#fff;
+}
+
+.grid-item:nth-child(19):hover{
+    background:#700303;
+}
+
+.grid-item:nth-child(20){
+    background:rgb(253, 144, 1);
+    color:#fff;
+}
+
+.grid-item:last-child:hover{
+    background:#f8ae0d;
+}
+
+span{
+    position: absolute;
+    bottom: 0;
+    margin:10px;
+}
+
+.moon{
+    color:#b8b8b8;
+}
+
+.dark-bg{
+    transition: all .3s;
+    background:#304150;
+}
+
+.dark-bg2{
+    transition: all .3s;
+    background:#171a1c;
+}
+
+.dark, .dark-keys{
+    transition: all .3s;
+    background:#111;
+    color:#f7f7f7;
+}
+
+.dark{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+.dark-keys:hover{
+    background:#151616;
 }

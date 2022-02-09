@@ -7,8 +7,43 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100;1,400;1,500;1,800&display=swap" rel="stylesheet"> 
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
-<body>
+<body id="body">
+    <div class="calculator">
+        <div class="modes">
+            <ion-icon name="sunny" class="sunny"></ion-icon>
+            <ion-icon name="moon" class="moon"></ion-icon>
+        </div>
+        <div class="input"></div>
+        <div class="result"></div>
+        <div class="grid-container">
+            <button class="grid-item" id="erase">AC</button>
+            <button class="grid-item" id="percentage">%</button>
+            <button class="grid-item" id="square">x²</button>
+            <button class="grid-item" id="/">/</button>
+            <button class="grid-item" id="7">7</button>
+            <button class="grid-item" id="8">8</button>
+            <button class="grid-item" id="9">9</button>
+            <button class="grid-item" id="by">*</button>
+            <button class="grid-item" id="4">4</button>
+            <button class="grid-item" id="5">5</button>
+            <button class="grid-item" id="6">6</button>
+            <button class="grid-item" id="minus">-</button>
+            <button class="grid-item" id="1">1</button>
+            <button class="grid-item" id="2">2</button>
+            <button class="grid-item" id="3">3</button>
+            <button class="grid-item" id="plus">+</button>
+            <button class="grid-item" id="root">√x</button>
+            <button class="grid-item" id="zero">0</button>
+            <button class="grid-item" id="del">DEL</button>
+            <button class="grid-item" id="equal">=</button>
+        </div>
+    </div>
+    <span class="credits">by Didier Mosley</span>
     <script src="calculator.js"></script>
 </body>
 </html>
